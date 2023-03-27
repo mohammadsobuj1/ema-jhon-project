@@ -1,0 +1,57 @@
+.product img{
+width: 286px;
+height: 286;
+margin-left: 10px;
+margin-top: 10px;
+border-radius: 10px;
+
+}
+.product{
+    position: relative;
+    border: 1px solid gray;
+    border-radius: 15px;
+
+}
+
+
+.card-product{
+   margin: 20px;
+}
+
+.card-btn{
+ position: absolute;
+ bottom: 0;
+    width: 100%;
+    padding: 14px;
+    background: #FFE0B3;
+border: 1px solid #95A0A7;
+border-radius: 0px 0px 8px 8px;
+}
+
+.pro-name{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 21px;
+line-height: 25px;
+letter-spacing: 0.0015em;
+margin-bottom: 10px;
+
+}
+
+.pro-price{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 20px;
+letter-spacing: 0.0015em;
+color: #0E161A;
+
+
+}
+
+.pro-rating{
+    margin-bottom: 50px;
+    
+}
