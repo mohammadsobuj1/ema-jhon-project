@@ -1,0 +1,24 @@
+.container-card{
+    background-color:  #ebba70;
+    padding: 15px;
+    margin-left: 15px;
+    position: sticky;
+    
+}
+.card-title{
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 30px;
+margin-bottom: 15px;
+text-align: center;
+}
+
+.items-card{
+font-family: 'Lato';
+font-style: normal;
+font-size: 17px;
+line-height: 20px;
+color: #2A414F;
+}
