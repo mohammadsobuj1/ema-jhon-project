@@ -19,7 +19,7 @@ const addBtn = props.addBtn
             <p>Manufacture : {seller}</p>
             <p className='pro-rating'>Rating : {ratings}</p>
            </div>
-            <button onClick={()=>addBtn(props.product)}  className='card-btn'>
+            <button onClick={()=>addBtn(props.product)}  className='btn-cart'>
                 Add to Card
                 <FontAwesomeIcon icon={faShoppingCart} />
             </button>

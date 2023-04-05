@@ -22,13 +22,15 @@ const Products = () => {
             addProduct.quntity= quntity
             saveCard.push(addProduct)
           }
-          console.log(addProduct)
+     
           }
           setCard(saveCard)
         },[products])
 
 
     const addBtn =(product)=>{
+    
+       
     //    const newCard = [...card, product]
         let newCard = []
 
@@ -40,8 +42,10 @@ const Products = () => {
         }
         else{
             exsit.quntity = exsit.quntity + 1;
-            const remaining = product.filter(pd => pd.id !== product.id)
-            newCard = [...card , remaining]
+          
+        
+            const remaining = card.filter(pd => pd.id !== product.id)
+            newCard = [...remaining , exsit]
         }
 
        setCard(newCard)
