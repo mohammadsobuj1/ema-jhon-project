@@ -4,6 +4,7 @@
     margin-left: 15px;
     position: sticky;
    top: 0;
+ 
     
 }
 .card-title{
@@ -22,4 +23,26 @@ font-style: normal;
 font-size: 17px;
 line-height: 20px;
 color: #2A414F;
+}
+
+.clear-btn{
+   width: 200px;
+   margin: 30px auto;
+    background: #FF3030;
+    color: #fff;
+   padding: 5px;
+   border-radius: 4px;
+   cursor: pointer;
+   border: none;
+   display: flex;
+   justify-content: space-between;
+   font-size: 18px;
+
+  
+   
+}
+
+.btn-icon{
+    font-size: 20px;
+   
 }

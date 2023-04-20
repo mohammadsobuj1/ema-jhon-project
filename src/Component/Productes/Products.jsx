@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SideCard from '../../SideCard/SideCard';
-import { addToDb, getShoppingCart } from '../../utilities/fakedb';
+import { addToDb, deleteShoppingCart, getShoppingCart } from '../../utilities/fakedb';
 import Product from '../Product/Product';
 import './Products.css'
 const Products = () => {
@@ -26,6 +26,12 @@ const Products = () => {
           }
           setCard(saveCard)
         },[products])
+
+        const clearHandelar =()=>{
+            setCard([])
+           deleteShoppingCart()
+        }
+
 
 
     const addBtn =(product)=>{
@@ -67,6 +73,7 @@ const Products = () => {
            </div>
             <div className="pro-card">
                <SideCard
+               clearHandelar={clearHandelar}
                card ={card}
                ></SideCard>
             </div>

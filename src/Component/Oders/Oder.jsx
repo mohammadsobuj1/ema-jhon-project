@@ -3,7 +3,7 @@ import SideCard from '../../SideCard/SideCard';
 import { useLoaderData } from 'react-router-dom';
 import Reviewitem from '../Reviewitem/Reviewitem';
 import './Oders.css'
-import { removeFromDb } from '../../utilities/fakedb';
+import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
 
 const Oder = () => {
     const card = useLoaderData()
@@ -13,8 +13,15 @@ const Oder = () => {
         const remaining = cards.filter(product => product.id !== id)
         setCart(remaining)
         removeFromDb(id)
-        console.log(id)
+       
     }
+
+    const clearHandelar =()=>{
+        setCart([])
+        deleteShoppingCart()
+    }
+
+   
     
     return (
         <div className='container'>
@@ -28,7 +35,10 @@ const Oder = () => {
             }
            </div>
            <div className="pro-card">
-            <SideCard card ={cards} ></SideCard>
+            <SideCard 
+            card ={cards} 
+            clearHandelar={clearHandelar}
+            ></SideCard>
 
             
            </div>

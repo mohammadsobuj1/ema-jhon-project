@@ -12,37 +12,45 @@ import Products from './Component/Productes/Products';
 import Inventory from './Component/Inventory/Inventory';
 import Login from './Component/Login/Login';
 import loaderData from './Component/Loaderdata/Loaderdata';
+import Singup from './Component/singup/Singup';
+import Authprovider from './Authprovider/Authprovider';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
-    children :[
+    children: [
       {
-        path:"/",
+        path: "/",
         element: <Products></Products>
       },
 
       {
-        path:"/oders",
+        path: "/oders",
         element: <Oder></Oder>,
-        loader:loaderData
+        loader: loaderData
       },
       {
-        path:"/inventory",
+        path: "/inventory",
         element: <Inventory></Inventory>
       },
       {
-        path:'/login',
-        element:<Login></Login>
+        path: "/singup",
+        element: <Singup></Singup>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
       }
-      
+
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <RouterProvider router={router} />
+    <Authprovider>
+      <RouterProvider router={router} />
+    </Authprovider>
 
   </React.StrictMode>,
 )
